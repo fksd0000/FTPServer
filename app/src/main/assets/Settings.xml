@@ -1,0 +1,6 @@
+<Settings>
+    <bool Key="serverEnable" Value="false"/>
+    <string Key="serverPort" Value="8021"/>
+    <string Key="serverRootLocation" Value=""/>
+    <string Key="serverRootPath" Value=""/>
+</Settings>

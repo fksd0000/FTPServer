@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -11,6 +11,17 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="31">#141414</item>
+        <item name="android:windowBackground">#ffffff</item>
+
         <!-- Customize your theme here. -->
+        <item name="android:textColor">#FF000000</item> <!-- Changes text to red -->
+        <item name="android:textColorSecondary">#FF000000</item> <!-- Changes secondary text -->
+
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 </resources>

@@ -55,6 +55,10 @@ dependencies {
 
 
     // Following ADDED.
+    implementation(files("D:\\#Back\\PWSpace\\MyApplication\\mylibrary\\build\\outputs\\aar\\mylibrary-debug.aar"))
+
     implementation("org.apache.ftpserver:ftpserver-core:1.2.0")
     implementation("org.apache.mina:mina-core:2.2.1")
+
+    implementation("androidx.preference:preference:1.2.1")
 }

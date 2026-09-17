@@ -5,7 +5,13 @@
     <!-- Following permissions are added. -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-
+    <!-- Required for Android 9 (API 28) and above -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Required for Android 14 (API 34) and above (choose the type matching your use case) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -25,6 +31,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".FTPServerService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" /> <!-- e.g., location, mediaPlayback, specialUse -->
+        <receiver android:name=".FTPServerService$NotificationReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="ACTION_TOAST" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

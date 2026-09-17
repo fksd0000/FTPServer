@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <SwitchPreferenceCompat
+        app:key="serverEnable"
+        app:title="Server"
+        app:summary="Start / stop the server."
+        app:defaultValue="false"
+        app:iconSpaceReserved="false"/>
+
+    <EditTextPreference
+        app:key="serverPort"
+        app:title="Port"
+        app:useSimpleSummaryProvider="true"
+        app:summary="Enter name of folder-pair"
+        app:dialogTitle="Enter name of folder-pair"
+        app:iconSpaceReserved="false"/>
+
+
+
+    <ListPreference
+        app:key="serverRootLocation"
+        app:title="Location"
+        app:useSimpleSummaryProvider="true"
+        app:summary="Enter name of folder-pair"
+        app:dialogTitle="Enter name of folder-pair"
+        app:iconSpaceReserved="false"/>
+    <EditTextPreference
+        app:key="serverRootPath"
+        app:title="Path"
+        app:useSimpleSummaryProvider="true"
+        app:iconSpaceReserved="false"/>
+
+</PreferenceScreen>
