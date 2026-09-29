@@ -10,6 +10,7 @@
 
 
 
+    <color name="purple">#664FA3</color>
     <color name="my_statusbar_color">#0f0f0f</color>
     <color name="my_statusbar_color_">#0f0f0f</color>
 </resources>

@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.ftpserver"
+        applicationId = "com.fksd2420.ftpserver"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
@@ -61,4 +61,15 @@ dependencies {
     implementation("org.apache.mina:mina-core:2.2.1")
 
     implementation("androidx.preference:preference:1.2.1")
+    implementation("org.apache.sshd:sshd-core:2.10.0")
+    implementation("org.apache.sshd:sshd-sftp:2.10.0")
+    implementation("javax.management:jmx:1.2.1")
+    implementation("org.bouncycastle:bcprov-jdk18on:1.80")
+    implementation("org.slf4j:slf4j-android:1.7.36")
+
+    // CRITICAL: Required for Ed25519 support in Apache MINA
+//    implementation("net.i2p.crypto:eddsa:0.3.0")
+
+
+
 }

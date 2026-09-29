@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">FTP Server</string>
+    <string name="symlink">
+        Using symlinks you can mount different locations
+        like /storage/emulated/0 and /storage/sdcard
+        under one directory.
+        \n\nThis directory can only be the app\'s internal
+        data directory.
+        \n\n\n
+    </string>
 </resources>

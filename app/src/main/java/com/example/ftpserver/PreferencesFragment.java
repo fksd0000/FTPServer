@@ -72,7 +72,7 @@ public class PreferencesFragment extends PreferenceFragmentCompat
 
         PreferenceManager preferenceManager = getPreferenceManager();
 
-        preferenceManager.setPreferenceDataStore(com.example.mylibrary.Settings.inMemoryDataStore);
+        preferenceManager.setPreferenceDataStore(Settings.PreferencesStore);
 
         setPreferencesFromResource(R.xml.preferences_fragment, rootKey);
 
@@ -96,7 +96,7 @@ public class PreferencesFragment extends PreferenceFragmentCompat
 
     private void saveButton_onClick(View view) {
 
-        Settings.inMemoryDataStore.putBoolean("serverEnable", false);
+        Settings.PreferencesStore.putBoolean("serverEnable", false);
 //        int serverPort = Settings.inMemoryDataStore.getInt("serverPort", 8021);
 //        String serverRootLocation = Settings.inMemoryDataStore.getString("serverRootLocation", "");
 //        String serverRootPath = Settings.inMemoryDataStore.getString("serverRootPath", "");

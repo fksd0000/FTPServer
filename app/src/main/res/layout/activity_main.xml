@@ -9,11 +9,10 @@
     android:orientation="vertical">
 
 
-    <RelativeLayout
-        android:id="@+id/actionbar_container"
+    <com.example.mylibrary.ActionBar
+        android:id="@+id/actionbar"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@color/black"/>
+        android:layout_height="64dp"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,114 +28,291 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:orientation="vertical"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp">
+                android:layout_weight="1"
+                android:padding="10dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"/>
+                    android:layout_height="wrap_content">
 
-                <LinearLayout
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Server"/>
+
+                    <com.google.android.material.materialswitch.MaterialSwitch
+                        android:id="@+id/serverEnable_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:checked="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SFTP"
+                        android:layout_marginRight="20dp"
+                        android:id="@+id/sftpServerEnable_checkBox"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FTP"
+                        android:id="@+id/ftpServerEnable_checkBox"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
+                    android:layout_marginTop="20dp">
 
-                    <RelativeLayout
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:text="SFTP Port"/>
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="5dp"
+                        android:text="8022"
+                        android:gravity="right|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:background="#F0F0F0"
+                        android:id="@+id/sftpPort"
+                        android:textSize="14sp"
+                        android:padding="5dp"
+                        android:inputType="number"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Server"/>
+                </RelativeLayout>
 
-                        <androidx.appcompat.widget.SwitchCompat
-                            android:id="@+id/serverEnable_switch"
-                            android:layout_width="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:layout_height="wrap_content"
-                            android:checked="false" />
-                    </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
 
-                    <RelativeLayout
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp">
+                        android:text="FTP Port(s)"/>
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="5dp"
+                        android:text="8021,8030-3039"
+                        android:gravity="right|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/ftpPort"
+                        android:background="#F0F0F0"
+                        android:textSize="14sp"
+                        android:padding="5dp"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Port"/>
-                        <EditText
-                            android:layout_width="150dp"
-                            android:layout_height="40dp"
-                            android:paddingLeft="5dp"
-                            android:text="8021"
-                            android:gravity="right|center_vertical"
-                            android:layout_alignParentRight="true"
-                            android:background="#F0F0F0"
-                            android:id="@+id/serverPort_edittext"
-                            android:textSize="14sp"
-                            android:padding="5dp"/>
+                </RelativeLayout>
 
-                    </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
 
-                    <RelativeLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="20dp"/>
+                        android:layout_height="wrap_content"
+                        android:text="Username"/>
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="5dp"
+                        android:text="admin"
+                        android:gravity="right|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:background="#F0F0F0"
+                        android:id="@+id/serverUsername"
+                        android:textSize="14sp"
+                        android:padding="5dp"/>
 
-                    <RelativeLayout
+
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:layout_marginTop="50dp"/>
+                    <EditText
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:paddingLeft="5dp"
+                        android:layout_marginTop="60dp"
+                        android:text="admin"
+                        android:gravity="right|center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:background="#F0F0F0"
+                        android:id="@+id/serverPassword"
+                        android:textSize="14sp"
+                        android:padding="5dp"/>
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Path"/>
-                        <EditText
-                            android:layout_width="200dp"
-                            android:layout_height="100dp"
-                            android:background="#F0F0F0"
-                            android:padding="5dp"
-                            android:gravity="top|left"
-                            android:layout_alignParentRight="true"
-                            android:id="@+id/edittext_path"
-                            android:textSize="14sp"
-                            android:text="/storage/16BE-0AF2/Torrents"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Anonymous"
+                        android:id="@+id/anonymous_checkBox"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="100dp"/>
+
+                </RelativeLayout>
 
 
-                    </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp">
 
-                    <RelativeLayout
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="20dp"/>
+                        android:layout_height="wrap_content"
+                        android:text="Path"/>
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentTop="true"
-                            android:text="Available locations" />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:id="@+id/availableLocations_textview"
-                            />
-                    </RelativeLayout>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:background="#F0F0F0"
+                        android:padding="5dp"
+                        android:gravity="top|left"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/serverPath_editText"
+                        android:textSize="14sp"
+                        android:text="/storage/16BE-0AF2/Torrents"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:visibility="gone"/>
+                </RelativeLayout>
 
 
-                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="Available\n(including app dir)" />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/availableLocations_textview"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Route to symlinks folder"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/symlinkPath_checkBox"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="SYMLINK"
+                    android:textSize="16dp"
+                    android:textColor="@color/purple"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"/>
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:background="#F0F0F0"
+                        android:padding="5dp"
+                        android:gravity="top|left"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/symlinkLocation_editText"
+                        android:textSize="14sp"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Target"
+                        android:layout_marginTop="50dp"/>
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="50dp"
+                        android:background="#F0F0F0"
+                        android:padding="5dp"
+                        android:gravity="top|left"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/symlinkTarget_editText"
+                        android:textSize="14sp"
+                        android:text=""/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Create symlink"
+                        android:layout_marginTop="150dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/createSymlink_button"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="Delete symlink"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/deleteSymlink_button"/>
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/symlink"/>
             </LinearLayout>
+
 
         </androidx.core.widget.NestedScrollView>
 

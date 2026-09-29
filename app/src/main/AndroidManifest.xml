@@ -24,7 +24,8 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,14 +34,14 @@
         </activity>
 
         <service
-            android:name=".FTPServerService"
+            android:name="com.example.mylibrary.ForegroundService"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="specialUse" /> <!-- e.g., location, mediaPlayback, specialUse -->
-        <receiver android:name=".FTPServerService$NotificationReceiver" android:exported="false">
-            <intent-filter>
-                <action android:name="ACTION_TOAST" />
-            </intent-filter>
+        <receiver android:name=".MainActivity$NotificationReceiver" android:exported="false">
+<!--            <intent-filter>-->
+<!--                <action android:name="ACTION_TOAST" />-->
+<!--            </intent-filter>-->
         </receiver>
     </application>
 

@@ -19,6 +19,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://www.datanucleus.org/downloads/maven2/") }
+
     }
 }
 
