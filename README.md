@@ -25,7 +25,7 @@ Permissions (required, not optional)
 <br/><br/>
   
 ## Symlinks
-You can access a removable sotrage like SDCard or USB drive by creating a symlink to its mount point.
+You can access a removable sotrage like SDCard or USB drive by creating a symlink to its mount point.\
 Multiple locations like Internal storage and SDCard can be accessed simultaneously under a single directory.
 
 
