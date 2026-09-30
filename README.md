@@ -1,3 +1,1 @@
-Readme
-
-<h>Android FTP Server</h>
+# Android FTP Server
