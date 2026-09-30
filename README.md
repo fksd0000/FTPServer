@@ -1,8 +1,8 @@
 # Android FTP Server
 
 Host SFTP / FTP server on your phone.
-\
-\
+<br/>
+<br/>
 Features
 - SFTP server
 - FTP server
