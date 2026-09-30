@@ -27,5 +27,5 @@ Multiple locations like Internal storage and SDCard can be accessed simultaneous
 
 
 ## Screenshots
-
-![Alt text](fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg)
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" width="400">
+<!--![Alt text]()-->
